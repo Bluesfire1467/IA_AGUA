@@ -1,0 +1,1 @@
+def consumo_fijo():
