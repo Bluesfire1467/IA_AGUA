@@ -4,10 +4,10 @@ from Arbol.Arbol_Decision import IA
 
 
 # Este ejecutable inicia el procesamiento
-
+print("Ejecutando...")
 
 mi_socket = socket.socket()
-mi_socket.bind( ('localhost',8000) )
+mi_socket.bind( ('localhost',3459) )
 
 # Cantidad de peticiones en cola
 mi_socket.listen(5)
@@ -18,9 +18,10 @@ while True:
     #print(f"Coneccion establecida con: {direccion}")
 
     entrada = conexion.recv(4096).decode()
-    decision = received_dict = json.loads(entrada)
+    parametros = received_dict = json.loads(entrada)
 
-    # Mostrar el diccionario recibido
+    # Ejecutando IA para tomar la decision
+    desicion = IA(parametros)
 
 
     # Cerrar la conexión
@@ -28,3 +29,4 @@ while True:
 
 
 def cisterna_data():
+    pass
