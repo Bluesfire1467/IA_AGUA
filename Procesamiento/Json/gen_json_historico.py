@@ -5,7 +5,7 @@ import random
 # Función para generar registros cada hora desde el lunes a las 0:00 hasta el viernes a las 23:00
 def generate_data():
     start_date = datetime(2023, 10, 23, 0, 0)  # Lunes
-    end_date = datetime(2023, 11, 27, 23, 0)  # Viernes
+    end_date = datetime(2023, 11, 26, 23, 0)  # Domingo
 
     data = []
     current_date = start_date
